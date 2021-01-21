@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(cors());
 
 
-var mongourl = "mongodb://127.0.0.1:27017/"
+const mongourl = process.env.DATABASE || "mongodb://127.0.0.1:27017/";
 
 app.get("/",(req,res)=>{
     res.json({
